@@ -1,0 +1,277 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('giphyy.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* Logo and search bar container */
+.logo-search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 40px; /* Rritur madhësia e logo-s */
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Search bar styling */
+.search-bar {
+    padding: 5px 8px; /* Rritur padding */
+    border: none;
+    border-radius: 5px;
+    width: 150px; /* Rritur gjerësia e search bar-it */
+    font-size: 18px; /* Rritur madhësia e fontit */
+}
+
+/* Navbar links */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; /* Largon elementet më shumë dhe i shpërndan ato në mënyrë të barabartë */
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav ul li {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px; /* Rritur madhësinë e fontit të fjalëve në navbar */
+    transition: color 0.3s;
+    text-align: center;
+}
+
+nav ul li:hover {
+    color: #ffffff;
+}
+
+/* Icons for login and shopping bag */
+.icons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Icon styling */
+.icon {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #ffffff;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+     no-repeat center center/cover;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* iPhone 4/4S, Galaxy S3/S4 (320px width) */
+@media (max-width: 320px) {
+    .logo-search {
+        flex-direction: column;
+        gap: 8px;
+        padding: 8px;
+    }
+
+    .logo {
+        font-size: 22px; /* Rritur madhësia e logo-s për ekranet më të vogla */
+    }
+
+    .search-bar {
+        width: 130px; /* Rritur gjerësia e search bar-it për ekranet më të vogla */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .hero h1 {
+        font-size: 16px;
+    }
+
+    .icons {
+        top: 5px;
+        right: 5px;
+        gap: 8px;
+    }
+}
+
+/* iPhone 5/5S, Galaxy S5, S6 (360px width) */
+@media (max-width: 360px) {
+    .logo {
+        font-size: 24px; /* Rritur madhësia e logo-s për ekranet më të vogla */
+    }
+
+    .search-bar {
+        width: 160px; /* Rritur gjerësia e search bar-it për ekranet më të vogla */
+    }
+
+    .hero h1 {
+        font-size: 18px;
+    }
+
+    .icons {
+        top: 5px;
+        right: 5px;
+        gap: 10px;
+    }
+}
+
+/* iPhone 6/7/8, Galaxy S7/S8 (375px width) */
+@media (max-width: 375px) {
+    .logo {
+        font-size: 26px; /* Rritur madhësia e logo-s për ekranet më të vogla */
+    }
+
+    .search-bar {
+        width: 170px; /* Rritur gjerësia e search bar-it për ekranet më të vogla */
+    }
+
+    .hero h1 {
+        font-size: 20px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    .icons {
+        top: 10px;
+        right: 10px;
+        gap: 12px;
+    }
+}
+
+/* iPhone X, XS, XR, Galaxy S9/S10 (414px width) */
+@media (max-width: 414px) {
+    .logo {
+        font-size: 28px; /* Rritur madhësia e logo-s për ekranet më të vogla */
+    }
+
+    .search-bar {
+        width: 180px; /* Rritur gjerësia e search bar-it për ekranet më të vogla */
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .icons {
+        top: 15px;
+        right: 15px;
+        gap: 14px;
+    }
+}
+
+/* iPhone 11, 12, 13, Galaxy S20, S21 (428px width) */
+@media (max-width: 428px) {
+    .logo {
+        font-size: 30px; /* Rritur madhësia e logo-s për ekranet më të vogla */
+    }
+
+    .search-bar {
+        width: 190px; /* Rritur gjerësia e search bar-it për ekranet më të vogla */
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .icons {
+        top: 15px;
+        right: 15px;
+        gap: 16px;
+    }
+}
+
+/* Medium devices like tablets (iPad, 768px) */
+@media (max-width: 768px) {
+    .logo-search {
+        flex-direction: row;
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 30px; /* Rritur madhësia e logo-s për ekranet më të mëdha */
+    }
+
+    .search-bar {
+        width: 230px; /* Rritur gjerësia e search bar-it për ekranet më të mëdha */
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .icons {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* Large devices (desktops and above, 1024px and above) */
+@media (min-width: 1024px) {
+    .logo {
+        font-size: 40px; /* Rritur madhësia e logo-s për desktop */
+    }
+
+    .search-bar {
+        width: 300px; /* Rritur gjerësia e search bar-it për desktop */
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
