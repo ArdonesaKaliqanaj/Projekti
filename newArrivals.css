@@ -1,0 +1,192 @@
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .product-card {
+    width: 23%; /* Ruani këtë për të mbajtur gjerësinë e kartës */
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Zvogëloni lartësinë e kartës për ta bërë më të vogël */
+  }
+  
+  .product-card img {
+    width: 100%; /* Kjo siguron që imazhi mbush gjerësinë e kartës */
+    height: 200px; /* Zvogëloni lartësinë e imazhit për ta bërë më të vogël */
+    object-fit: cover; /* Siguron që imazhi mbush hapësirën pa deformim */
+  }
+  
+  .product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .product-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+    flex-grow: 1;
+  }
+  
+  .product-card .price {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .product-card .price .discounted-price {
+    font-weight: bold;
+    color: #000000;
+  }
+  
+  .product-card .price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+  }
+  
+  .product-card button {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .product-card button:hover {
+    background-color: #0056b3;
+  }
+
+  /* Stilimi për logon e shportës */
+.cart-icon {
+    width: 20px; /* Madhësia e ikonës së shportës */
+    height: auto;
+  }
+
+  /* Butoni Shop */
+.shop-btn {
+    background: transparent; /* Sfondi transparent, që merr ngjyrën e faqes */
+    color: rgb(255, 255, 255); /* Ngjyra e tekstit */
+    padding: 8px 16px; /* Ulni padding për ta bërë butonin më të ngushtë */
+    border: 2px solid #ffffff; /* Kufiri i bardhë rreth butonit */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Animacion për kalimet e ngjyrave */
+    margin: 20px;
+}
+
+.shop-btn:hover {
+    background: #b0b0b0; /* Ndryshon ngjyrën në një gri më të lehtë */
+    border-color: #b0b0b0; /* Kufiri bëhet gri më i lehtë */
+    color: #fff; /* Ngjyra e tekstit bëhet e bardhë kur kalon mbi butonin */
+}
+
+
+.footer {
+    background-color: #f7f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer div {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #757d85;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+    color: #757d85;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #ebebeb;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width : 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer div {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #757d85;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Shtrirja e ikonave horizontale dhe rritja e madhësisë */
+.footer .fab {
+    font-size: 40px; /* Madhësia e ikonave, mund ta ndryshoni sipas dëshirës */
+    margin-right: 20px; /* Hapsirë midis ikonave */
+    color: #757d85; /* Ngjyra fillestare e ikonave */
+    transition: color 0.3s; /* Animim për ndryshimin e ngjyrës */
+}
+
+/* Ikonat për ndryshimin e ngjyrës kur kalon mbi to */
+.footer .fab:hover {
+    color: #000203; /* Ngjyra e ikonave kur kalohet mbi to */
+}
+
+/* Sigurohuni që të shfaqen horizontalisht */
+.footer div:first-child {
+    display: flex;
+    align-items: center; /* Ndihmon në rreshtimin e ikonave në mënyrë vertikale të drejtuar */
+}
+
+/* Stilet e tjera mbeten të njëjta */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+    color: #757d85;
+}
