@@ -328,3 +328,140 @@ body {
     margin: 5px 0;
     color: #757d85;
 }
+
+
+
+/* Hero Section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+                url('giphyy.gif') no-repeat center center/cover;
+    background-size: cover; /* Siguron që background të mbulojë gjithësinë */
+    opacity: 1; /* Background-i mbetet i dukshëm që nga fillimi */
+}
+
+/* Teksti që fillon të jetë i fshehur */
+h1 {
+    font-size: 2.5em;
+    color: #ffffff;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 20px;
+    opacity: 0; /* Teksti është i fshehur fillimisht */
+    animation: fadeInText 1s forwards; /* Animacion për shfaqjen e tekstit */
+    animation-delay: 1s; /* Animacioni fillon pas 1 sekonde nga hyrja në faqe */
+}
+
+/* Animacion për shfaqjen e tekstit me shpejtësi më të lartë */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animacionet për secilën frazë */
+@keyframes slideInLeft {                                     
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Apply animations to specific spans */
+.animate-left {
+    display: inline-block;
+    animation: slideInLeft 1.5s ease-out forwards; /* Animacioni është më i shpejtë */
+    opacity: 0; /* Fillimisht është i fshehur */
+    animation-delay: 0.6s; /* Shfaqja e "Stay TechWave" fillon pas 5 sekondash */
+    animation-duration: 1.5s; /* Animacioni për "Stay TechWave" */
+    animation-fill-mode: forwards;
+}
+
+.animate-right {
+    display: inline-block;
+    animation: slideInRight 1.5s ease-out forwards; /* Animacioni është më i shpejtë */
+    opacity: 0; /* Fillimisht është i fshehur */
+    animation-delay: 0.6s; /* Shfaqja e "Stay TechWave" fillon pas 5 sekondash */
+    animation-duration: 1.5s; /* Animacioni për "Stay TechWave" */
+    animation-fill-mode: forwards;
+}
+
+/* Animacionet për secilën frazë */
+.animate-wave {
+    display: inline-block;
+    animation: slideInLeft 1.5s ease-out forwards; /* Animacioni është më i shpejtë */
+    font-size: 2.5em; /* Madhësia e fontit për "Stay TechWave" */
+    font-weight: bolder;
+    color: white;
+    margin-top: 20px;
+    opacity: 0; /* Fillimisht është i fshehur */
+    animation-delay: 2s; /* Shfaqja e "Stay TechWave" fillon pas 2 sekondash */
+    animation-duration: 1.5s; /* Animacioni për "Stay TechWave" */
+    animation-fill-mode: forwards;
+}
+
+/* Ulje e madhësisë vetëm për fjalën "Wave" */
+.smaller-wave {
+    font-size: 1.5em; /* E bëjmë më të vogël */
+}
+
+/* Animacion i ri për "Stay TechWave" për shfaqjen me lëvizje */
+@keyframes slideInTechWave {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* Butoni Shop */
+.shop-btn {
+    background: transparent; /* Sfondi transparent, që merr ngjyrën e faqes */
+    color: rgb(255, 255, 255); /* Ngjyra e tekstit */
+    padding: 8px 16px; /* Ulni padding për ta bërë butonin më të ngushtë */
+    border: 2px solid #ffffff; /* Kufiri i bardhë rreth butonit */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Animacion për kalimet e ngjyrave */
+    margin: 20px;
+}
+
+.shop-btn:hover {
+    background: #b0b0b0; /* Ndryshon ngjyrën në një gri më të lehtë */
+    border-color: #b0b0b0; /* Kufiri bëhet gri më i lehtë */
+    color: #fff; /* Ngjyra e tekstit bëhet e bardhë kur kalon mbi butonin */
+}
+
+
+

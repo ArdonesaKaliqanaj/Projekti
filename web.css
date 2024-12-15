@@ -1,0 +1,412 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('giphyy.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    width: 100%;
+}
+
+/* Logo and search bar container */
+.logo-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo majtas dhe search bar ne qender */
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.tech {
+    color: #ffffff; /* Tech ka ngjyrë të bardhë */
+}
+
+.wave {
+    color: #808080; /* Wave ka ngjyrë hiri */
+}
+
+/* Search bar container */
+.search-container {
+    position: relative;
+    flex-grow: 1; /* Lë të ketë hapësirë të barabartë për të zënë mesin */
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    padding: 8px 12px; /* Rritur padding për një ndjesi më komode */
+    border: 1px solid #ddd; /* Kufiri i hollë */
+    border-radius: 10px; /* Pa rrethim (kufij të drejtpërdrejtë) */
+    width: 250px; /* E bën më të ngushtë (më e ngushtë se 50%) */
+    font-size: 14px; /* Madhësia e fontit më e vogël */
+    transition: border 0.3s;
+}
+
+
+/* Search bar hover effect */
+.search-bar:focus {
+    border-color: #808080; /* Ndryshon kufirin kur fokusohet */
+}
+
+/* Icona e kërkimit */
+.search-icon {
+    position: relative;
+    left: 10px;
+    color: #808080;
+    font-size: 18px;
+    pointer-events: none;
+}
+
+/* Navbar links */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly; /* Largon elementet më shumë dhe i shpërndan ato në mënyrë të barabartë */
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav ul li {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    transition: color 0.3s;
+    text-align: center;
+}
+
+nav ul li:hover {
+    color: #959292; /* Hiri për hover */
+}
+
+/* Icons for login and shopping bag */
+.icons {
+    display: flex;
+    gap: 20px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Icon styling */
+.icon {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #959292;
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+     no-repeat center center/cover;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    line-height: 1.5;
+    color: #ffffff;
+}
+
+/* Për ngjyrën e ikonave dhe navbar-it kur janë të klikuar */
+.icon.active,
+nav ul li.active {
+    color: #808080; /* Ngjyrë hiri për elementin e klikuar */
+}
+
+/* Për elementet që mund të klikohen */
+.icon {
+    color: rgb(255, 255, 255); /* Ngjyra fillestare */
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    transition: color 0.3s;
+    text-align: center;
+}
+
+/* Hover effect për navbar dhe ikona */
+.icon:hover,
+nav ul li:hover {
+    color: #959292;
+}
+
+
+  
+  
+
+
+/* Kontejneri i produkteve */
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Karta e produktit */
+  .product-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfond i bardhë me transparencë */
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  /* Imazhet e produkteve */
+  .product-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Titulli i produktit */
+  .product-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Përshkrimi i produktit */
+  .product-card p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  /* Çmimet */
+  .product-card .price {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .product-card .price .discounted-price {
+    font-weight: bold;
+    color: #e74c3c;
+  }
+  
+  .product-card .price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+  }
+  
+  /* Oferta */
+  .product-card .offer {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  /* Butoni */
+  .product-card button {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .product-card button:hover {
+    background-color: #27ae60;
+  }
+
+.footer {
+    background-color: #f7f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer div {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #757d85;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+    color: #757d85;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.footer {
+    background-color: #ebebeb;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width : 100%;
+    position: relative;
+    bottom: 0;
+}
+
+.footer div {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #757d85;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Shtrirja e ikonave horizontale dhe rritja e madhësisë */
+.footer .fab {
+    font-size: 40px; /* Madhësia e ikonave, mund ta ndryshoni sipas dëshirës */
+    margin-right: 20px; /* Hapsirë midis ikonave */
+    color: #757d85; /* Ngjyra fillestare e ikonave */
+    transition: color 0.3s; /* Animim për ndryshimin e ngjyrës */
+}
+
+/* Ikonat për ndryshimin e ngjyrës kur kalon mbi to */
+.footer .fab:hover {
+    color: #000203; /* Ngjyra e ikonave kur kalohet mbi to */
+}
+
+/* Sigurohuni që të shfaqen horizontalisht */
+.footer div:first-child {
+    display: flex;
+    align-items: center; /* Ndihmon në rreshtimin e ikonave në mënyrë vertikale të drejtuar */
+}
+
+/* Stilet e tjera mbeten të njëjta */
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer .contact-info p {
+    margin: 5px 0;
+    color: #757d85;
+}
+
+.shop-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 220px;
+}
+
+.shop-btn:hover {
+    background: #808080;
+}
+
+
+/* Titulli Hero */
+.hero h1 {
+    font-size: 2.5em; /* Madhësia e titullit */
+    color: #ffebeb;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    margin: 0;
+    z-index: 2; /* Siguron që titulli të jetë mbi background */
+}
+
+/* Teksti "Wave" */
+.wave {
+    color: #808080; /* Ngjyra hiri për "Wave" */
+}
+
+/* Përshkrimi i Hero */
+.hero p {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 800px;
+    font-size: 1.2em;
+    color: #ffffff;
+    line-height: 1.6;
+    z-index: 2; /* Siguron që përshkrimi të jetë mbi background */
+    position: relative;
+    padding: 0 10px; /* Shtohet pak padding për ta bërë më të lexueshëm */
+    text-align: center;
+}
+
+/* Më shumë hapësirë dhe madhësi për t'i dhënë efekt ndarjes së tekstit në disa rreshta */
+.hero h1 {
+    white-space: normal; /* Lejon ndarjen në disa rreshta */
+    text-align: center; /* Siguron që titulli është në qendër */
+}
+
+/* Për të vendosur përshkrimin në një hapësirë më të pastër dhe të lehtë për t'u lexuar */
+.hero p {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1em;
+    line-height: 1.7; /* Hapësirë midis rreshtave për përshkrimin */
+}
