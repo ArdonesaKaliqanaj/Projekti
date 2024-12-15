@@ -1,0 +1,331 @@
+*/* Resetimi dhe stilizimi bazë */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    }
+    
+    body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    }
+    
+    .header {
+    position: fixed; /* Kjo e bën header të qëndrojë fikse */
+    top: 0; /* Pozicioni në majë të faqes */
+    left: 0; /* E shtrinë nga skaji i majtë */
+    width: 100%; /* Gjerësia mbulon gjithë faqen */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.8); /* Ngjyra e sfondit me pak transparencë */
+    z-index: 1000; /* Siguron që header të jetë mbi elementët e tjerë */
+    .header {
+    position: relative; /* ose fixed */
+    background: url('giphyy.gif') no-repeat center center/cover;
+    background-size: cover;
+    height: 100px; /* Ose madhësia që dëshiron për header */
+    }
+    
+    }
+    
+    
+    .logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: #ffffff;
+    }
+    .tech {
+    color: #ffffff; /* Tech ka ngjyrë të bardhë */
+    }
+    
+    .wave {
+    color: #808080; /* Wave ka ngjyrë hiri */
+    }
+    
+    .nav a {
+    text-decoration: none;
+    color: #f7f4f4;
+    margin: 0 10px;
+    font-size: 1em;
+    }
+    
+    .icon:hover {
+    color: #959292;
+    }
+    
+    
+    /* Për ngjyrën e ikonave dhe navbar-it kur janë të klikuar */
+    .icon.active,
+    nav ul li.active {
+    color: #808080; /* Ngjyrë hiri për elementin e klikuar */
+    }
+    
+    .nav a:hover {
+    color: #bfc2c6;
+    }
+    
+    .icons i {
+    font-size: 1.2em;
+    color: #f4f0f0;
+    margin: 0 10px;
+    cursor: pointer;
+    }
+    
+    .icons i:hover {
+    color: #808080;
+    }
+    
+    .search-bar {
+    display: none; /* Fsheh search bar fillimisht */
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1em;
+    margin-left: 10px;
+    width: 150px;
+    }
+    
+    /* Kur search bar bëhet aktiv */
+    .search-bar.active {
+    display: inline-block; /* Shfaq search bar */
+    }
+    
+    /* Dropdown për produktet */
+    .dropdown {
+    display: none;
+    position: absolute;
+    top: 60px; /* Pozicionim poshtë header */
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    border-radius: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+    
+    .dropdown ul {
+    list-style: none;
+    padding: 10px;
+    }
+    
+    .dropdown li {
+    padding: 8px 20px;
+    border-bottom: 1px solid #ffffff;
+    font-size: 1em;
+    color: #080808;
+    cursor: pointer;
+    }
+    
+    .dropdown li:last-child {
+    border-bottom: none;
+    }
+    
+    .dropdown li:hover {
+    background-color: #808080;
+    color: #ffffff;
+    }
+    
+    .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    }
+    
+    .product-card {
+    width: 23%; /* Ruani këtë për të mbajtur gjerësinë e kartës */
+    box-sizing: border-box;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px; /* Zvogëloni lartësinë e kartës për ta bërë më të vogël */
+    }
+    
+    .product-card img {
+    width: 100%; /* Kjo siguron që imazhi mbush gjerësinë e kartës */
+    height: 200px; /* Zvogëloni lartësinë e imazhit për ta bërë më të vogël */
+    object-fit: cover; /* Siguron që imazhi mbush hapësirën pa deformim */
+    }
+    
+    .product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    }
+    
+    .product-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 10px 0;
+    flex-grow: 1;
+    }
+    
+    .product-card .price {
+    font-size: 16px;
+    margin: 10px 0;
+    }
+    
+    .product-card .price .discounted-price {
+    font-weight: bold;
+    color: #000000;
+    }
+    
+    .product-card .price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+    }
+    
+    .product-card button {
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    }
+    
+    .product-card button:hover {
+    background-color: #0056b3;
+    }
+    
+    /* Stilimi për logon e shportës */
+    .cart-icon {
+    width: 20px; /* Madhësia e ikonës së shportës */
+    height: auto;
+    }
+    
+    /* Butoni Shop */
+    .shop-btn {
+    background: transparent; /* Sfondi transparent, që merr ngjyrën e faqes */
+    color: rgb(255, 255, 255); /* Ngjyra e tekstit */
+    padding: 8px 16px; /* Ulni padding për ta bërë butonin më të ngushtë */
+    border: 2px solid #ffffff; /* Kufiri i bardhë rreth butonit */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease; /* Animacion për kalimet e ngjyrave */
+    margin: 20px;
+    }
+    
+    .shop-btn:hover {
+    background: #b0b0b0; /* Ndryshon ngjyrën në një gri më të lehtë */
+    border-color: #b0b0b0; /* Kufiri bëhet gri më i lehtë */
+    color: #fff; /* Ngjyra e tekstit bëhet e bardhë kur kalon mbi butonin */
+    }
+    
+    
+    .footer {
+    background-color: #f7f4f4;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    }
+    
+    .footer div {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    }
+    
+    .footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    }
+    
+    .footer a {
+    text-decoration: none;
+    color: #757d85;
+    display: block;
+    margin-bottom: 5px;
+    }
+    
+    .footer a:hover {
+    text-decoration: underline;
+    }
+    
+    .footer .contact-info p {
+    margin: 5px 0;
+    color: #757d85;
+    }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    }
+    
+    .footer {
+    background-color: #ebebeb;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width : 100%;
+    position: relative;
+    bottom: 0;
+    }
+    
+    .footer div {
+    margin: 10px;
+    flex: 1;
+    min-width: 200px;
+    }
+    
+    .footer h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #333;
+    }
+    
+    .footer a {
+    text-decoration: none;
+    color: #757d85;
+    display: block;
+    margin-bottom: 5px;
+    }
+    
+    /* Shtrirja e ikonave horizontale dhe rritja e madhësisë */
+    .footer .fab {
+    font-size: 40px; /* Madhësia e ikonave, mund ta ndryshoni sipas dëshirës */
+    margin-right: 20px; /* Hapsirë midis ikonave */
+    color: #757d85; /* Ngjyra fillestare e ikonave */
+    transition: color 0.3s; /* Animim për ndryshimin e ngjyrës */
+    }
+    
+    /* Ikonat për ndryshimin e ngjyrës kur kalon mbi to */
+    .footer .fab:hover {
+    color: #000203; /* Ngjyra e ikonave kur kalohet mbi to */
+    }
+    
+    /* Sigurohuni që të shfaqen horizontalisht */
+    .footer div:first-child {
+    display: flex;
+    align-items: center; /* Ndihmon në rreshtimin e ikonave në mënyrë vertikale të drejtuar */
+    }
+    
+    /* Stilet e tjera mbeten të njëjta */
+    .footer a:hover {
+    text-decoration: underline;
+    }
+    
+    .footer .contact-info p {
+    margin: 5px 0;
+    color: #757d85;
+    }
+    
