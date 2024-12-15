@@ -1,0 +1,138 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Header Section */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+header .logo p {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav .btn {
+    background-color: #777;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+nav .btn:hover {
+    background-color: #777;
+}
+
+nav .btn.Home {
+    background-color: #868686;
+}
+
+nav .btn.Home:hover {
+    background-color: #868686;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+.about .content {
+    width: 60%;
+}
+
+.about .content h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.about .content p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.about .image {
+    width: 35%;
+}
+
+.about .image img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+    background-color: #e9ecef;
+    padding: 40px;
+    margin-top: 40px;
+}
+
+.why-choose-us h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.why-choose-us .content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.why-choose-us ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.why-choose-us ul li {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.why-choose-us ul li b {
+    color: #007BFF;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 40px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+    }
+
+    .about .content, .about .image {
+        width: 100%;
+        text-align: center;
+    }
+
+    .why-choose-us ul li {
+        font-size: 1rem;
+    }
+}
