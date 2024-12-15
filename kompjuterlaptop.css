@@ -1,0 +1,95 @@
+/* Sfondi i faqes */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Blue-Wallpaper-For-Background-1.jpg'); /* Emri i fotos që do të përdoret si sfond */
+    background-size: cover; /* Mbush të gjithë ekranin */
+    background-position: center; /* Qendron imazhin në mes */
+    background-repeat: no-repeat; /* Nuk e përsërit sfondin */
+    background-attachment: fixed; /* Sfondi mbetet i palëvizshëm kur skrollohet faqja */
+    color: #333; /* Ngjyra e tekstit nëse është e nevojshme */
+  }
+  
+  /* Kontejneri i produkteve */
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Karta e produktit */
+  .product-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Sfond i bardhë me transparencë */
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+  }
+  
+  /* Imazhet e produkteve */
+  .product-card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Titulli i produktit */
+  .product-card h3 {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+  }
+  
+  /* Përshkrimi i produktit */
+  .product-card p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  /* Çmimet */
+  .product-card .price {
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .product-card .price .discounted-price {
+    font-weight: bold;
+    color: #e74c3c;
+  }
+  
+  .product-card .price .original-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-left: 10px;
+  }
+  
+  /* Oferta */
+  .product-card .offer {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin: 10px 0;
+  }
+  
+  /* Butoni */
+  .product-card button {
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .product-card button:hover {
+    background-color: #27ae60;
+  }
+  
